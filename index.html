@@ -227,11 +227,21 @@ span.number-text4 {
           <h2 id="feature-name">Cucumber Tomato Avocado Salad</h2>
 
             <div class="dish-meta">
-              <span class="number-text1">1 Serve</span>
-              <div class="arrows-container">
+              <!-- <span class="number-text1">1 Serve</span> -->
+
+              <span class="number-text1" id="serve-display">1 Serve</span>
+
+
+              <!-- <div class="arrows-container">
                   <span class="material-symbols-outlined">arrow_drop_up</span>
                   <span class="material-symbols-outlined">arrow_drop_down</span>
-              </div>
+              </div> -->
+
+              <div class="arrows-container">
+                <span class="material-symbols-outlined arrow-up">arrow_drop_up</span>
+                <span class="material-symbols-outlined arrow-down">arrow_drop_down</span>
+            </div>
+
               <span class="base">150</span>
               <span class="unit">g</span>
               <span class="cal">180</span>
@@ -270,218 +280,306 @@ span.number-text4 {
     type:["lunch", "dinner"],
     name:"Cucumber Tomato Avocado Salad",
     image: "./photos/cucumber-tomato-avocado-salad.webp",
-    cal: 180,
-    unit: "g",
-    base: 150,
-    stepup: 75,
-    stepdown: 25,
-    minimum: 1,
-    maximum: 5,
+    gramsPerServe: 150,
+    caloriesPerServe: 180,
+    unit: "g",  // 单位是克
+    step: 0.5,
+    minimum: 0.5,
+    maximum: 4,
+    currentServe: 1,
+    currentGrams: 150,
+    currentCalories: 180
 },
 {
   type:["lunch", "dinner"],
   name:"Creamy Lemon Chicken",
   image:"./photos/creamy-lemon-chicken.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 100,
+  caloriesPerServe: 120,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 100,
+  currentCalories: 120
 },
 {
   type:["lunch", "dinner"],
   name:"Grilled Shrimp Tacos",
   image:"./photos/grilled-shrimp-tacos.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 90,
+  caloriesPerServe: 110,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 90,
+  currentCalories: 110
 },
 {
   type:["breakfast", "dinner"],
   name:"Honey BBQ Chicken Wings",
   image:"./photos/honey-bbq-chicken-wings.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 160,
+  caloriesPerServe: 100,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 160,
+  currentCalories: 100
 },
 {
   type:["lunch", "breakfast"],
   name:"Ingredient Dough Pizza",
   image:"./photos/ingredient-dough-pizza.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 200,
+    caloriesPerServe: 190,
+    unit: "g",  // 单位是克
+    step: 0.5,
+    minimum: 0.5,
+    maximum: 4,
+    currentServe: 1,
+    currentGrams: 200,
+    currentCalories: 190
 },
 {
   type:["lunch", "dinner"],
   name:"Beef and Broccoli Noodle Stir Fry",
   image:"./photos/beef-and-broccoli-noodle-stir-fry.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 130,
+  caloriesPerServe: 160,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 130,
+  currentCalories: 160
 },
 {
   type:["lunch", "dinner"],
   name:["dinner"],
   image:"./photos/chinese-chicken-fried-rice.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 80,
+  caloriesPerServe: 180,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 80,
+  currentCalories: 180
 },
 {
   type:["dinner"],
   name:"Classic Chicken Noodle Soup",
   image:"./photos/classic-chicken-noodle-soup.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 100,
+  caloriesPerServe: 280,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 100,
+  currentCalories: 280
 },
 {
   type:["lunch"],
   name:"Fivecheese Mac and Cheese",
   image:"./photos/fivecheese-mac-and-cheese.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 190,
+  caloriesPerServe: 120,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 190,
+  currentCalories: 120
 },
 {
   type:["lunch"],
   name:"Grilled Cheese",
   image:"./photos/grilled-cheese.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 140,
+  caloriesPerServe: 135,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 140,
+  currentCalories: 135
 },
 {
   type:["lunch"],
   name:"Mushroom Stroganoff",
   image:"./photos/mushroom-stroganoff.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 75,
+  caloriesPerServe: 125,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 75,
+  currentCalories: 125
 },
 {
   type:["lunch", "dinner"],
   name:"Scalloped Potatoes",
   image:"./photos/scalloped-potatoes.webp",
-  cal:120,
-  unit:"g",
-  base:150,
-  stepup:75,
-  stepdown:25,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 180,
+  caloriesPerServe: 150,
+  unit: "g",  // 单位是克
+  step: 0.5,
+  minimum: 0.5,
+  maximum: 4,
+  currentServe: 1,
+  currentGrams: 180,
+  currentCalories: 150
 },
 {
   type:["breakfast"],
   name:"The Fluffiest Vegan Pancakes",
   image:"./photos/the-fluffiest-vegan-pancakes.webp",
-  cal:120,
-  unit:"ea",
-  base:1,
-  stepup:0.5,
-  stepdown:0.5,
-  minimum:1,
-  maximum:5,
+  gramsPerServe: 1,
+  caloriesPerServe: 40,
+  unit: "ea",  // 单位是个
+  step: 1,
+  minimum: 1,
+  maximum: 10,
+  currentServe: 1,
+  currentGrams: 1,
+  currentCalories: 40
 },
 {
   type:["breakfast","snack"],
   name:"Chocolate Chip Cookies",
   image:"./photos/chocolate-chip-cookies.webp",
-  cal:40,
-  unit:"ea",
-  base:1,
-  stepup:1,
-  stepdown:1,
-  minimum:1,
-  maximum:10,
+  gramsPerServe: 1,
+  caloriesPerServe: 65,
+  unit: "ea",  // 单位是个
+  step: 1,
+  minimum: 1,
+  maximum: 10,
+  currentServe: 1,
+  currentGrams: 1,
+  currentCalories: 65
 },    
   ];
-  
-  function createDishBox(dish) {
-      const box = document.createElement('div');
-      box.className = 'dish-box';
-      box.innerHTML = `
-          <img src="${dish.image}" alt="${dish.name}">
-          <p class="dish-name">${dish.name}</p>
-      `;
-      box.addEventListener('click', () => {
-          const featureImage = document.getElementById('feature-image');
-          const featureName = document.getElementById('feature-name');
-          const cal = document.querySelector('.cal');
-          const unit = document.querySelector('.unit');
-          const base = document.querySelector('.base');
-          const dishFeature = document.querySelector('.dish-feature');
-  
-          featureImage.src = dish.image;
-          featureImage.alt = dish.name;
-          featureName.textContent = dish.name;
-          cal.textContent = dish.cal;
-          base.textContent = dish.base;
-          unit.textContent = dish.unit;
-          
-          // 滚动到dish-feature元素
-          dishFeature.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-      return box;
-  }
-  
-  function filterDishes(type) {
+
+//   function updateDisplay(dish) {
+//     const featureImage = document.getElementById('feature-image');
+//     const featureName = document.getElementById('feature-name');
+//     const cal = document.querySelector('.cal');
+//     const base = document.querySelector('.base');
+//     const unit = document.querySelector('.unit');
+//     const arrowUp = document.querySelector('.arrow-up');
+//     const arrowDown = document.querySelector('.arrow-down');
+
+//     featureImage.src = dish.image;
+//     featureImage.alt = dish.name;
+//     featureName.textContent = dish.name;
+//     cal.textContent = dish.currentCalories;
+//     base.textContent = dish.currentGrams;
+//     unit.textContent = dish.unit;
+
+//     arrowUp.onclick = () => increaseServing(dish);
+//     arrowDown.onclick = () => decreaseServing(dish);
+// }
+
+function updateDisplay(dish) {
+    const featureImage = document.getElementById('feature-image');
+    const featureName = document.getElementById('feature-name');
+    const cal = document.querySelector('.cal');
+    const base = document.querySelector('.base');
+    const unit = document.querySelector('.unit');
+    const serveDisplay = document.getElementById('serve-display'); // 获取份量显示元素
+    const arrowUp = document.querySelector('.arrow-up');
+    const arrowDown = document.querySelector('.arrow-down');
+
+    featureImage.src = dish.image;
+    featureImage.alt = dish.name;
+    featureName.textContent = dish.name;
+    cal.textContent = dish.currentCalories;
+    base.textContent = dish.currentGrams;
+    unit.textContent = dish.unit;
+    serveDisplay.textContent = dish.currentServe + " Serve"; // 更新份量显示
+
+    // 绑定事件处理器到箭头
+    arrowUp.onclick = () => {
+        increaseServing(dish);
+        updateDisplay(dish);
+    };
+    arrowDown.onclick = () => {
+        decreaseServing(dish);
+        updateDisplay(dish);
+    };
+}
+
+
+
+// function increaseServing(dish) {
+//     if (dish.currentServe + dish.step <= dish.maximum) {
+//         dish.currentServe += dish.step;
+//         dish.currentGrams += dish.gramsPerServe * dish.step;
+//         dish.currentCalories += Math.round(dish.caloriesPerServe * dish.step);
+//         updateDisplay(dish);
+//     }
+// }
+
+// function decreaseServing(dish) {
+//     if (dish.currentServe - dish.step >= dish.minimum) {
+//         dish.currentServe -= dish.step;
+//         dish.currentGrams -= dish.gramsPerServe * dish.step;
+//         dish.currentCalories -= Math.round(dish.caloriesPerServe * dish.step);
+//         updateDisplay(dish);
+//     }
+// }
+
+function increaseServing(dish) {
+    if (dish.currentServe + dish.step <= dish.maximum) {
+        dish.currentServe += dish.step;
+        dish.currentGrams += dish.gramsPerServe * dish.step;
+        dish.currentCalories += Math.round(dish.caloriesPerServe * dish.step);
+    }
+}
+
+function decreaseServing(dish) {
+    if (dish.currentServe - dish.step >= dish.minimum) {
+        dish.currentServe -= dish.step;
+        dish.currentGrams -= dish.gramsPerServe * dish.step;
+        dish.currentCalories -= Math.round(dish.caloriesPerServe * dish.step);
+    }
+}
+
+
+
+function createDishBox(dish) {
+    const box = document.createElement('div');
+    box.className = 'dish-box';
+    box.innerHTML = `<img src="${dish.image}" alt="${dish.name}"><p class="dish-name">${dish.name}</p>`;
+    box.addEventListener('click', () => updateDisplay(dish));
+    return box;
+} 
+
+function filterDishes(type) {
     const dishList = document.querySelector('.dish-list');
     dishList.innerHTML = ''; // 清空当前菜品列表
 
-    const filteredDishes = dishes.filter(dish => {
-        // 确保每个菜品都有 type 属性，且为数组，然后检查是否包含所需类型
-        return dish.type && Array.isArray(dish.type) && (type === '' || dish.type.includes(type));
-    });
-
-    filteredDishes.forEach(dish => {
-        dishList.appendChild(createDishBox(dish));
-    });
+    const filteredDishes = dishes.filter(dish => dish.type.includes(type) || type === '');
+    filteredDishes.forEach(dish => dishList.appendChild(createDishBox(dish)));
 }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-      // 初始化显示所有菜品
-      filterDishes('');
-  });
+
+document.addEventListener('DOMContentLoaded', function() {
+    filterDishes(''); // 初始化显示所有菜品
+});
   </script>
 
 
