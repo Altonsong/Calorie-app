@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 <title>Dish</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -485,5 +486,161 @@ span.number-text4 {
   </script>
 
 
+=======
+<title>Calorie App</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lugrasimo&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lugrasimo&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+
+body {
+  /* background: linear-gradient(to bottom, #d8e7dc 0%, #d7d7d7 100%); */
+  margin: 0;
+  font-family:  "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.title {
+font-family: "Pacifico", cursive;
+  font-size: 36px;
+}
+
+#selected-dish {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#selected-img {
+  max-width: 60%;
+  height: auto;
+  border: 2px solid #ccc; /* Added a border to highlight the selected image */
+  border-radius: 10px; /* Adds rounded corners with a 5px radius */
+
+}
+
+#calories-info {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+
+ .dish-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items horizontally */
+  align-content: start; /* Align the items to the start of the container */
+  width: 100%;
+}
+
+.dish {
+  flex: 0 1 calc(33.33% - 10px); /* 使用 calc 函数减去总边距 */
+  margin: 5px; /* 为每个 dish 添加 5px 的边距 */
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.dish img {
+  width: 100%; /* Make the image responsive to the container width */
+  height: auto; /* Keep the image aspect ratio */
+  border-radius: 10px; /* Adds rounded corners */
+}
+
+
+.dish img:hover {
+  transform: scale(1.1); /* Added a hover effect for interactivity */
+}
+
+@media (max-width: 390px) {
+  .dish {
+    flex-basis: calc(33.33% - 6px); /* Subtract the total margin from the width */
+    margin: 3px; /* Adjust margin to ensure it fits in the row */
+  }
+
+  .dish img {
+    width: 80px; /* Adjust image size if necessary */
+    height: 80px; /* Adjust image size if necessary */
+  }
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.2);
+}
+
+.navbar i {
+  font-size: 20px;
+  color: #666;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="title">DISH</div>
+
+<div id="selected-dish">
+    <img id="selected-img" src="./photos/grilled-shrimp-tacos.webp" alt="Selected Dish">
+    <p id="calories-info"></p>
+</div>
+
+<div class="dish-container">
+    <div class="dish" onclick="selectDish(0)"><img src="./photos/beef-and-broccoli-noodle-stir-fry.webp" alt="Dish 1">Beef and Broccoli Noodle Stir fry</div>
+    <div class="dish" onclick="selectDish(1)"><img src="./photos/chinese-chicken-fried-rice.webp" alt="Dish 2">Chinese Chicken Fried Rice</div>
+    <div class="dish" onclick="selectDish(2)"><img src="./photos/classic-chicken-noodle-soup.webp" alt="Dish 3">Classic Chicken Noodle Soup</div>
+    <div class="dish" onclick="selectDish(3)"><img src="./photos/creamy-lemon-chicken.webp" alt="Dish 4">Creamy Lemon Chicken</div>
+    <div class="dish" onclick="selectDish(4)"><img src="./photos/cucumber-tomato-avocado-salad.webp" alt="Dish 5">Cucumber Tomato Avocado Salad</div>
+    <div class="dish" onclick="selectDish(5)"><img src="./photos/grilled-shrimp-tacos.webp" alt="Dish 6">Grilled Shrimp Tacos</div>
+    <div class="dish" onclick="selectDish(6)"><img src="./photos/honey-soy-glazed-salmon.webp" alt="Dish 7">Honey Soy Glazed Salmon</div>
+    <div class="dish" onclick="selectDish(7)"><img src="./photos/mushroom-stroganoff.webp" alt="Dish 8">Mushroom Stroganoff</div>
+    <div class="dish" onclick="selectDish(8)"><img src="./photos/potato-soup.webp" alt="Dish 9">Potato Souppotato Soup</div>
+</div>
+
+<nav class="navbar">
+    <i class="fas fa-home"></i>
+    <i class="fas fa-search"></i>
+    <i class="fas fa-plus"></i>
+    <i class="fas fa-user"></i>
+</nav>
+
+<script src="scripts.js"></script>
+>>>>>>> 6bc48c7b1b5db1a358ac05d683c30f0cc0e0dd30
 </body>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body, html {
   margin: 0;
   padding: 0;
@@ -147,3 +148,98 @@ span.material-symbols-outlined.expand-all {
   text-align: center; /* 文本居中 */
   padding: 10px 0; /* 在文本上下添加一些内边距 */
 }
+=======
+body {
+  /* background: linear-gradient(to bottom, #d8e7dc 0%, #d7d7d7 100%); */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: auto;
+}
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+}
+
+#selected-dish {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#selected-img {
+  max-width: 60%;
+  height: auto;
+  border: 2px solid #ccc; /* Added a border to highlight the selected image */
+  border-radius: 10px; /* Adds rounded corners with a 5px radius */
+
+}
+
+#calories-info {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.dish-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.dish img {
+  width: 100px; /* Adjust based on actual needs or responsive design */
+  height: 100px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 10px; /* Adds rounded corners with a 5px radius */
+
+}
+
+.dish img:hover {
+  transform: scale(1.1); /* Added a hover effect for interactivity */
+}
+
+.dish {
+  flex-basis: 30%; /* Adjusting for three dishes per row */
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+@media (max-width: 390px) {
+  .dish {
+      flex-basis: 33.33%; /* Ensures 3 dishes per row on very narrow screens */
+  }
+
+  .dish img {
+      width: 80px;
+      height: 80px;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.2);
+}
+
+.navbar i {
+  font-size: 20px;
+  color: #666;
+}
+>>>>>>> 6bc48c7b1b5db1a358ac05d683c30f0cc0e0dd30
